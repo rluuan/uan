@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<!-- <script src='https://cdn.rawgit.com/rluuan/uan/master/lib_uan.js'></script> -->
+	<script src='lib_uan.js'></script>
+</head>
+<body>
+	<script>
+		$(function() {
+			$('#id-file').showImage('id-show').css('height', '10px');
+			$('#id_block-words').blockWords('rodrigo');
+		});		
+	</script>
+	
+	<body>
+			
+			<p>onblur</p>
+			<input type="text" id="a" >
+
+			<br>
+
+			<input type="text" ob='a'>
+	
+			<p>keypress</p>
+
+			<input type="text" id="b">
+			<br>
+			<input type="text" kp='b'>
+
+			<br><br>
+
+			<p>show files </p>
+
+			<input type="file" id="id-file">
+
+			<img src="" id="id-show" alt="">
+			<br><br>
+			<p>Bloquear texto no input</p>
+
+			<input type="text" id="id_block-words">
+	</body>
+
+</html>
