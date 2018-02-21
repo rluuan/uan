@@ -127,13 +127,14 @@
  /*
 	------------------------------------------
 	|function returnDataCEP
-	| This function gonna return 
-	| 
+	|
+	| This function will get with parameter a object that will to have
+	| the index that you'll search (logradouro, bairro) and cep 
 
  */
  function returnDataCEP(obj_ids) {
 
- 	$.get('https://viacep.com.br/ws/' + obj_ids['cep'] + '/' + obj_ids['mode'], function(data) {
+ 	$.get('https://viacep.com.br/ws/' + obj_ids['cep'] + '/json', function(data) {
  		if (obj_ids['logradouro']) {
  			$(obj_ids['logradouro']).val(data['logradouro']);
  		}
