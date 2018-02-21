@@ -1,3 +1,11 @@
+/*!
+ * uan Javascript Library v.1.0.0
+ *
+ * github.com/rluuan
+ *
+ * date: 2018-02-20
+*/
+
 $(function() {
 	
 	
