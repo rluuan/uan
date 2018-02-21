@@ -12,9 +12,27 @@
 		$(function() {
 			$('#id-file').showImage('id-show').css('height', '10px');
 			$('#id_block-words').blockWords('rodrigo');
+			$('#id_click-progress-bar').click(function() {
+				$('#id_progress-bar').progressBar('id_progress-bar', '1', 20);
+
+			});
+			$('#sum-table').returnSumClass('.sum', 'text', 1, 'text');
 		});		
+			var obj_cep_contents = {
+				cep: '64013-020',
+				logradouro: '#id_localidade',
+				bairro: '#id_bairro',
+				mode: 'json'
+			}
+			returnDataCEP(obj_cep_contents); // cep by https://www.4devs.com.br/gerador_de_cep
 	</script>
-	
+	<style>
+		#id_progress-bar {
+			height: 80px;
+			background-color: blue;
+			width: 1px;
+		}
+	</style>
 	<body>
 			
 			<p>onblur</p>
@@ -41,6 +59,43 @@
 			<p>Bloquear texto no input</p>
 
 			<input type="text" id="id_block-words">
+
+			<p>progress bar</p>
+			<button id="id_click-progress-bar">Click</button>
+			<div id="id_progress-bar"></div>
+
+	
+			<table>
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>name</th>
+						<th>content</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>jose</td>
+						<td class="sum">10,200.00</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>rodrigo</td>
+						<td class="sum">2,200.00</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>carlos</td>
+						<td class="sum">3,200.00</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="sum-table">
+				
+			</div>
+			<input type="text" id="id_localidade" placeholder="localidade">
+			<input type="text" id="id_bairro" placeholder="bairro">
 	</body>
 
 </html>
