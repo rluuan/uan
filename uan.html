@@ -19,11 +19,12 @@
 			$('#sum-table').returnSumClass('.sum', 'text', 1, 'text');
 		});		
 			var obj_cep_contents = {
-				cep: '64013-020',
+				cep: '64013-020', // cep by https
+				//www.4devs.com.br/gerador_de_cep
 				logradouro: '#id_localidade',
 				bairro: '#id_bairro'
 			}
-			returnDataCEP(obj_cep_contents); // cep by https://www.4devs.com.br/gerador_de_cep
+			returnDataCEP(obj_cep_contents); 
 	</script>
 	<style>
 		#id_progress-bar {
@@ -90,9 +91,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<div id="sum-table">
-				
-			</div>
+			<div id="sum-table"></div>
 			<input type="text" id="id_localidade" placeholder="localidade">
 			<input type="text" id="id_bairro" placeholder="bairro">
 	</body>
